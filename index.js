@@ -1,7 +1,5 @@
-$.get("https://async-workshops-api.herokuapp.com/people", function(peopleResponse) {
-  peopleResponse.forEach(function(person) {
-    $.get("https://async-workshops-api.herokuapp.com/people/" + person.id, function(personResponse) {
-      console.log(personResponse.favouriteMusic);
-    });
-  });
+var time = 2000;
+["Alpha", "Bravo", "Charlie"].forEach(function(word) {
+  setTimeout(function() {console.log(word); }, time);
+  time -= 1000;
 });
